@@ -1,5 +1,11 @@
 # Hexagonal Architecture — Spring Boot Reference Implementation
 
+![Java](https://img.shields.io/badge/Java-25-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-4.0.6-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
+![Maven](https://img.shields.io/badge/Maven-Build-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)
+![Lombok](https://img.shields.io/badge/Lombok-Enabled-pink?style=for-the-badge&logo=lombok&logoColor=white)
+![Architecture](https://img.shields.io/badge/Architecture-Hexagonal-7B2FBE?style=for-the-badge&logo=diagrams.net&logoColor=white)
+
 A hands-on reference project demonstrating **Hexagonal Architecture** (Ports & Adapters) using Spring Boot 4 and Java 25. Built as a clean, minimal example of how to structure a domain-centric application where business logic is completely isolated from infrastructure concerns.
 
 ---
