@@ -5,6 +5,7 @@ import com.example.hexagonalstruct.user.zout.UserMapper;
 import com.example.hexagonalstruct.user.UserService;
 import com.example.hexagonalstruct.user.zdto.CreateUserDto;
 import com.example.hexagonalstruct.user.zdto.ResponseUserDto;
+import lombok.Cleanup;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,5 +32,10 @@ public class UserController {
     public ResponseEntity<ResponseUserDto> get(@PathVariable Long id) {
         User user = userService.getUser(id);
         return ResponseEntity.ok(userMapper.domainToDto(user));
+    }
+
+    @PostMapping("/update/{id}")
+    public ResponseEntity<ResponseUserDto> update(@PathVariable Long id, @RequestBody CreateUserDto dto){
+        return ResponseEntity.ok(userMapper.domainToDto(userService.updateUser(dto, id)));
     }
 }

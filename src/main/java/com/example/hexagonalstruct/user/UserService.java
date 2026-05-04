@@ -1,5 +1,6 @@
 package com.example.hexagonalstruct.user;
 
+import com.example.hexagonalstruct.user.zdto.CreateUserDto;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -17,5 +18,11 @@ public class UserService {
 
     public User getUser(Long id) {
         return persistencePort.getById(id);
+    }
+
+    public User updateUser(CreateUserDto dto, Long id){
+       User oldDataUser = persistencePort.getById(id);
+       User newUser = new User(oldDataUser.id(), dto.name(),dto.age(), dto.description());
+       return persistencePort.save(newUser);
     }
 }
