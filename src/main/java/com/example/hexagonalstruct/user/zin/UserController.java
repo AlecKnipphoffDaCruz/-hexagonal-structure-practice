@@ -1,7 +1,7 @@
 package com.example.hexagonalstruct.user.zin;
 
 import com.example.hexagonalstruct.user.User;
-import com.example.hexagonalstruct.user.UserMapper;
+import com.example.hexagonalstruct.user.zout.UserMapper;
 import com.example.hexagonalstruct.user.UserService;
 import com.example.hexagonalstruct.user.zdto.CreateUserDto;
 import com.example.hexagonalstruct.user.zdto.ResponseUserDto;

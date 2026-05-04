@@ -1,8 +1,8 @@
-package com.example.hexagonalstruct.user;
+package com.example.hexagonalstruct.user.zout;
 
+import com.example.hexagonalstruct.user.User;
 import com.example.hexagonalstruct.user.zdto.CreateUserDto;
 import com.example.hexagonalstruct.user.zdto.ResponseUserDto;
-import com.example.hexagonalstruct.user.zout.UserEntity;
 import org.springframework.stereotype.Component;
 
 @Component
