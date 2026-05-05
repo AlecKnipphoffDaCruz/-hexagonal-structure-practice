@@ -1,7 +1,6 @@
 package com.example.hexagonalstruct.user.zout;
 
 
-import com.fasterxml.jackson.annotation.JsonTypeId;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

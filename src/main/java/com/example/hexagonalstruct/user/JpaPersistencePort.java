@@ -1,10 +1,12 @@
 package com.example.hexagonalstruct.user;
 
+import java.util.Optional;
+
 public interface JpaPersistencePort {
 
     User save(User user);
 
-    User getById(Long id);
+    Optional<User> getById(Long id);
 
     void deleteById(Long id);
 }

@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 @Component
 public class FakePostgresAdpter implements JpaPersistencePort {
@@ -20,9 +21,9 @@ public class FakePostgresAdpter implements JpaPersistencePort {
     }
 
     @Override
-    public User getById(Long id) {
-        UserEntity entity = database.get(id);
-        return new User(entity.getId(), entity.getName(), entity.getAge(), entity.getDescription());
+    public Optional<User> getById(Long id) {
+        return Optional.ofNullable(database.get(id))
+                .map(e -> new User(e.getId(), e.getName(), e.getAge(), e.getDescription()));
     }
 
     @Override

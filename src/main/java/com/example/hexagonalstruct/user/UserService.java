@@ -17,12 +17,14 @@ public class UserService {
     }
 
     public User getUser(Long id) {
-        return persistencePort.getById(id);
+        return persistencePort.getById(id)
+                .orElseThrow(() -> new RuntimeException("User not found: " + id));
     }
 
     public User updateUser(CreateUserDto dto, Long id){
-       User oldDataUser = persistencePort.getById(id);
-       User newUser = new User(oldDataUser.id(), dto.name(),dto.age(), dto.description());
+       User oldDataUser = persistencePort.getById(id)
+               .orElseThrow(() -> new RuntimeException("User not found: " + id));
+       User newUser = new User(oldDataUser.id(), dto.name(), dto.age(), dto.description());
        return persistencePort.save(newUser);
     }
 }
