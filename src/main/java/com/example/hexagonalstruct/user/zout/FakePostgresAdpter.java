@@ -24,4 +24,10 @@ public class FakePostgresAdpter implements JpaPersistencePort {
         UserEntity entity = database.get(id);
         return new User(entity.getId(), entity.getName(), entity.getAge(), entity.getDescription());
     }
+
+    @Override
+    public void deleteById(Long id){
+        //delete
+        return;
+    }
 }
